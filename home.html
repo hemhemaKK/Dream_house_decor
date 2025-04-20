@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UFT-8">
+<meta http-equiv="X-UA-compatible"content="IE=edge">
+<meta name="viewport"content="width=device-width, intial-scale=1.0">
+<title>Blooger</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<nav class="flex align-center">
+  <img src="./images/logo.jpg" height=70px width=100px />
+  <ul>
+    <li class="big-screens">
+      <a href="#">Home</a>
+      <a href="#">Store</a>
+      <a href="#">AboutUs</a>
+      <a href="mailto:support@dreamhousedecor.com?subject=Booking%20Inquiry&body=Hi%2C%0AWelcome%20to%20Dream%20House%20Decor.%0ADo%20you%20want%20to%20book%20an%20appointment%20with%20us%3F" class="btn contact">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://www.decorpot.com/images/breadcumb/Living-room-Mob.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://images.livspace-cdn.com/plain/https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/3/2020/07/28033809/Cover-18.png" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://www.jdinstitute.edu.in/media/2019/01/Interior-Designing-Pics.png" style="width:100%">
+  
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+  let slideIndex = 0;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  
+  function showSlides() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("showing");
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+  
+    slides[slideIndex - 1].classList.add("showing");
+  
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    dots[slideIndex - 1].className += " active";
+  
+    setTimeout(showSlides, 4000); // Change every 4 seconds
+  }
+  
+  showSlides();
+  </script>
+  
+  
+<br>
+<center><h2>OUR COLLECTIONS</h2></center>
+<br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h2.jpg" alt="Interior" style="width:100%; height:auto;">
+        </div><br>
+        <div class="card-text">
+          <h5>Painting</h5><br>
+          <button class="btn see-more" data-category="painting">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h3.jpg" alt="Interior Design" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Interior</h5><br>
+          <button class="btn see-more" data-category="interior">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h4.jpg" alt="Interior Decor" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Interior</h5><br>
+          <button class="btn see-more" data-category="interior">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h11.jpg" alt="Interior Setup" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Interior</h5><br>
+          <button class="btn see-more" data-category="interior">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h6.jpg" alt="Furniture" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Furniture</h5><br>
+          <button class="btn see-more" data-category="furniture">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h7.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Painting</h5><br>
+          <button class="btn see-more" data-category="painting">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h8.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Painting</h5><br>
+          <button class="btn see-more" data-category="painting">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h9.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Furniture</h5><br>
+          <button class="btn see-more" data-category="furniture">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/w5.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Interior</h5><br>
+          <button class="btn see-more" data-category="interior">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h10.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Interior</h5><br>
+          <button class="btn see-more" data-category="interior">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/w3.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Interior</h5><br>
+          <button class="btn see-more" data-category="interior">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/w4.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Wall Painting</h5><br>
+          <button class="btn see-more" data-category="painting">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h15.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Wall Painting</h5><br>
+          <button class="btn see-more" data-category="painting">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h16.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Wall Painting</h5><br>
+          <button class="btn see-more" data-category="painting">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h18.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Wall Painting</h5><br>
+          <button class="btn see-more" data-category="painting">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-content">
+        <div class="img-place">
+          <img src="./images/h20.jpg" alt="Painting" style="width:100%; height:auto;">
+        </div>
+        <div class="card-text"><br>
+          <h5>Wall Painting</h5><br>
+          <button class="btn see-more" data-category="painting">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Image Viewer -->
+<div id="imageModal" class="modal">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+<script>
+  // Open modal with clicked image
+  document.querySelectorAll('.img-place img').forEach(img => {
+    img.addEventListener('click', () => {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  // Close the modal
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+
+  // Close when clicking outside image
+  window.onclick = function(event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<div id="categoryModal" class="modal">
+  <span class="modal-close" onclick="closeCategoryModal()">&times;</span>
+  <div id="modalContent" class="modal-gallery-content"></div>
+</div>
+<script>
+  const categoryImages = {
+    painting: [
+      './images/h2.jpg',
+      './images/h7.jpg',
+      './images/h8.jpg',
+      './images/w4.jpg',
+      './images/h15.jpg',
+      './images/h16.jpg',
+      './images/h18.jpg',
+      './images/h20.jpg',
+      './images/wall1.jpeg',
+      './images/wall2.jpeg',
+      './images/wall3.jpeg',
+      './images/wall4.jpeg',
+
+    ],
+    interior: [
+      './images/h3.jpg',
+      './images/h4.jpg',
+      './images/h11.jpg',
+      './images/w5.jpg',
+      './images/h10.jpg',
+      './images/w3.jpg',
+      './images/i1.jpeg',
+      './images/i2.jpeg',
+      './images/i3.jpeg',
+      './images/i4.jpeg',
+      './images/h19.jpg',
+      './images/w1.jpg',
+      './images/w2.jpg',
+      './images/w6.jpg',
+      './images/w7.jpg',
+
+    ],
+    furniture: [
+      './images/h6.jpg',
+      './images/h9.jpg',
+      './images/fa.jpeg',
+      './images/f1.jpeg',
+      './images/f2.jpeg',
+      './images/f3.jpeg',
+      './images/f4.jpeg',
+      './images/h5.jpg',
+      './images/h12.jpg',
+      './images/h13.jpg',
+      './images/h14.jpg',
+      './images/h17.jpg',
+    ]
+  };
+
+  document.querySelectorAll('.see-more').forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category');
+      const images = categoryImages[category];
+      const modal = document.getElementById("categoryModal");
+      const content = document.getElementById("modalContent");
+
+      // Clear previous content
+      content.innerHTML = '';
+
+      // Add new images
+      images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        content.appendChild(img);
+      });
+
+      modal.style.display = "block";
+    });
+  });
+
+  function closeCategoryModal() {
+    document.getElementById("categoryModal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("categoryModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+<br>
+
+<div class="card-container">
+  <div class="card u-clearfix">
+    <div class="card-content-wrapper">
+      <div class="text-section">
+        <h2 class="card-title" style="margin: 10px;">About Our Company</h2>
+        <span class="card-description subtle"  style="margin: 10px;">
+          We bring good quality furniture and design your house beautifully.
+        </span>
+        <div class="card-read"  style="margin: 10px;">Read</div>
+      </div>
+      <div class="video-section">
+        <video autoplay muted loop>
+          <source src="./images/article.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer-distributed enhanced-footer">
+
+  <div class="footer-left">
+    <h3>Big<span>Rock</span></h3>
+
+    <p class="footer-links">
+      <a href="#" class="link-1">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </p>
+
+    <p class="footer-company-name">BigRock Interiors © 2025</p>
+    
+    <p class="footer-company-about"><br><br><br><br>
+      <span>About the company</span>
+      We bring elegant designs and quality furniture to make your spaces stunning and functional.
+    </p>
+
+    <div class="footer-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    
+  </div>
+
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa-solid fa-map-location-dot"></i>
+      <p><span>RT Nagar</span> Bangalore, Karnataka</p>
+    </div>
+
+    <div>
+      <i class="fa-solid fa-phone-volume"></i>
+      <p>+91 9876543210</p>
+    </div>
+
+    <div>
+      <i class="fa-solid fa-envelope"></i>
+      <p><a href="mailto:support@bigrock.com">support@bigrock.com</a></p>
+    </div>
+  </div>
+<!-- Embedded Google Map -->
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps?q=RT+Nagar+Bangalore&output=embed" 
+    width="250" 
+    height="150" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</div>
+
+</footer>
+</body>
+</html>
